@@ -6,9 +6,9 @@ spring:
       write-dates-as-timestamps: true
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&autoReconnectForPools=true&rewriteBatchedStatements=true
+    url: jdbc:mysql://192.168.1.35:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&autoReconnectForPools=true&rewriteBatchedStatements=true
     username: root
-    password: root
+    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     initialSize: 5
     minIdle: 5
@@ -16,12 +16,21 @@ spring:
     maxWait: 60000
 
   redis:
-    host: localhost
+    host: 192.168.1.35
     port: 6379
     database: 0
     timeout: 5000ms
     max-idle: 8
-    min-idle； 1
+    min-idle: 1
+
+  data:
+    mongodb:
+      host: 192.168.1.35
+      port: 27017
+      database: mytest
+      username: root
+      password: '123456'
+      authentication-database: admin
 mybatis:
   type-aliases-package: com.fpi.test.model
 
