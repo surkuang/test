@@ -34,3 +34,7 @@ spring:
 mybatis:
   type-aliases-package: com.fpi.test.model
 
+nacos:
+  config:
+    server-addr: 192.168.1.35:8848
+
